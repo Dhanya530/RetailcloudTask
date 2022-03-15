@@ -1,0 +1,7 @@
+<button mat-raised-button color="primary" class="button" (click)="download()" >Export to CSV</button>
+<mat-grid-list *ngFor="let values of data" cols="2" rowHeight="2:1" >
+  <mat-grid-tile class="grid">{{values.title}}</mat-grid-tile>
+  <mat-grid-tile class="grid1">{{values.body}}</mat-grid-tile>
+  <mat-grid-tile class="grid2">{{values.userId}}</mat-grid-tile>
+  <mat-grid-tile class="grid3">{{values.id}}</mat-grid-tile>
+</mat-grid-list>

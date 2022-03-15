@@ -1,0 +1,14 @@
+<button mat-raised-button class="button" color="primary"(click)="download()">Export to CSV</button>
+<table style="width:100%">
+  <tr>
+    <th>UserId</th>
+    <th>Title</th>
+
+  </tr>
+  <tr *ngFor="let values of data">
+    <td>{{values.userId}}</td>
+    <td>{{values.title}}</td>
+
+  </tr>
+  
+</table>

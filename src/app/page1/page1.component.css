@@ -1,0 +1,17 @@
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+  }
+  th, td {
+    padding: 15px;
+  }
+  th {
+    text-align: left;
+  }
+  .button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  margin-left:85%;
+}

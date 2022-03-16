@@ -26,21 +26,12 @@ export class Page2Component implements OnInit {
   };
   
   download() {
-    const options = { 
-      fieldSeparator: ',',
-      quoteStrings: '"',
-      decimalSeparator: '.',
-      showLabels: true, 
-      showTitle: true,
-      title: 'CSV',
-      useTextFile: false,
-      useBom: true,
-      useKeysAsHeaders: true,
-
-    };
-    const csvExporter = new ExportToCsv(options);
- 
-    let value=csvExporter.generateCsv(this.data);
-}
+    const header = Object.keys(this.data[0]);
+    let csv = this.data.map(row => header.map(fieldName => JSON.stringify(row[fieldName])).join(','));
+    csv.unshift(header.join(','));
+    let csvArray = csv.join('\r\n');
+    var blob = new Blob([csvArray], {type: 'text/csv' })
+    saveAs(blob, "myFile.csv");
+  }
 
 }

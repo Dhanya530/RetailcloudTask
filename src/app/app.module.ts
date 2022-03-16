@@ -53,7 +53,6 @@ import { HttpClientModule } from '@angular/common/http';
         { path: 'page2', component: Page2Component },
         { path: '', redirectTo: '/page1', pathMatch: 'full' },
       ],
-      { enableTracing: true }
     ),
     BrowserAnimationsModule,
   ],
